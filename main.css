@@ -57,7 +57,7 @@ container
     left: 30%;
     right: 30%;
     top: 15%;
-    position: relative;
+    position: fixed;
 	width: 567px;
 	height: 359px;
 	background-color: #fff;
