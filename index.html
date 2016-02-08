@@ -1,42 +1,156 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Chiika</title>
-        <meta name="description" content="Chiika.moe">
-        <link rel="stylesheet" href="main.css">
-        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <script>
-            var bgNum = Math.floor((Math.random() * 3));
-        
-            bgID = new Array(3);
-            bgID[0] = "background1";
-            bgID[1] = "background2";
-            bgID[2] = "background3";
-            var backgroundID = bgID[bgNum];
-        </script>
-    </head>
-    <body>
-        <div class="container">
-            <script>
-                document.write("<div class='" + backgroundID + "'></div>");
-            </script>
-        </div>
-        <div class="card">
-            <p id="headerText">Welcome to Chiika</p>
-                
-                <p id="text">Currently we are construction</p>  
-                <center>
-                    <a href="http://twitter.com/chiikamoe" class="icons"><span class="fa fa-twitter-square fa-4x"></span></a>
-                    <a href="http://reddit.com/r/chiika" class="icons"><i class="fa fa-reddit-square fa-4x"></i></a>
-            </center>
-            
 
-            
-            </a>
-        </br>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/chiika.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper blue-grey darken-2">
+                <a href="#!" class="brand-logo">Chiika</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="http://chiikamoe.tumblr.com">Dev Blog</a></li>
+                    <li><a href="#">Download</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="row" id="firstRow">
+        <br>
+        <div class="row noSpace">
+            <center>
+                <img src="img/logo-colored.png" width="200" height="200" id="welcomeLogo">
+            </center>
         </div>
-    </body>
+        <center>
+            <div class="col l6 push-l3 s12">
+                <h3 class="center-align">Chiika</h3>
+                <h5 class="center-align light">Chiika is an upcoming open source Myanimelist.net client for Windows, Linux and Mac OS.</h5>
+                <br>
+                <a class="btn disabled">Coming Soon</a>
+                <br>
+                <p></p>
+                <br>
+            </div>
+        </center>
+    </div>
+    <div class="row">
+        <center>
+            <img src="img/ss.png" id="first-ss"></img>
+        </center>
+    </div>
+
+
+    <div class="row blue-grey darken-3 " id="three-way">
+        <br>
+        <center>
+            <div class="col l4 s12 white-text">
+                <img src="img/final.svg" class="chi-glyph">
+                <h4>Beautiful</h4>
+                <h5 class="light">Modern UI without sacrificing functionality</h5>
+            </div>
+            <div class="col l4 s12  white-text ">
+                <i class="fa fa-github fa-4x"></i>
+                <h4>Open Source</h4>
+                <h5 class="light">Do you want to see source code?<br> Its on Github!</h6>
+            </div>
+            <div class="col l4 s12  white-text ">
+                    <i class="fa fa-arrows fa-4x "></i>
+                    <h4>Cross Platform</h4>
+                    <h5 class="light">No Windows No Problem. Chiika also works on Linux and Mac OS</h5>
+            </div>
+        </center>
+        <div class="row"></div>
+    </div>
+
+    <!-- Left aligned row-->
+    <div class="row info-row">
+        <div class="a1">
+            <div class="col l5">
+                <h3 class="light">Take Control of Your Library</h3>
+                <ul>
+                    <p class="flow-text">With Chiika, you can check whats going on with your both anime list and mangalist. Chiika also offers help you to organize your files and screenshots.</p>
+                </ul>
+            </div>
+            <div class="col l5"></div>
+        </div>
+    </div>
+
+    <!-- Right aligned row-->
+    <div class="row info-row">
+        <div class="a1">
+            <div class="col l5"></div>
+            <div class="col l5 right-align">
+                <h3 class="light">Let Chiika Work For You</h3>
+                <ul>
+                    <p class="flow-text">Chiika automaticly recognizes anime you are currently watching and updates your list.</p>
+                    <p>*Auto update is currently anime only</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left aligned row-->
+    <div class="row info-row">
+        <div class="a1">
+            <div class="col l5">
+                <h3 class="light">More to Come</h3>
+                <ul>
+                    <p class="flow-text">Currently we are working hard to bring new features to Chiika. To keep up with us you can follow our
+                        <a href="http://chiikamoe.tumblr.com">Dev Blog</a> or <a href="http://twitter.com/chiikamoe">Twitter.</a></p>
+                </ul>
+            </div>
+            <div class="col l5"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer noSpace blue-grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Support Us!</h5>
+                    <p class="grey-text text-lighten-4">You can support us via donation through Paypal or buying some merchandise via society6!</p>
+                </div>
+                <div class="col l6 offset-l2 s12">
+                    <h5 class="white-text right-align">Links</h5>
+                    <ul class="right-align">
+                        <li><a class="grey-text text-lighten-3" href="http://twitter.com/chiikamoe">Twitter</a></li>
+                        <li><a class="grey-text text-lighten-3" href="http://chiikamoe.tumblr.com/">Dev Blog</a></li>
+                        <li><a class="grey-text text-lighten-3" href="http://www.reddit.com/r/chiika">Reddit</a></li>
+                        <li><a class="grey-text text-lighten-3" href="http://github.com/arkenthera/chiika">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright blue-grey darken-4">
+            <div class="container">
+                Two Man Anime project: Chiika
+                <a class="grey-text text-lighten-4 right"></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type=" text/javascript " src="https://code.jquery.com/jquery-2.1.1.min.js "></script>
+    <script type="text/javascript " src="js/materialize.min.js "></script>
+</body>
+
 </html>
