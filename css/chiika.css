@@ -16,6 +16,9 @@
 #first-ss {
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.40);
     margin-top: -130px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
 }
 
 .brand-logo {
