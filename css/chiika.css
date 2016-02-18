@@ -22,7 +22,12 @@
 }
 
 .brand-logo {
-	margin-left: 25px;
+	/*margin-left: 25px;*/
+}
+
+.nav-wrapper {
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .a1 {
