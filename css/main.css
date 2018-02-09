@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #455A64;
+    font-family: sans-serif;
+}
+
+section {
+    margin: 0 auto;
+    color: #eee;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2em;
+    margin: .6em;
+}
+h2 {
+    font-weight: 200;
+    margin: .3em;
+}
+a {
+    color: #fefefe;
+    font-family: monospace;
+    padding: 1em;
+    margin: 1em;
+}
