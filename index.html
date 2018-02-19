@@ -14,11 +14,79 @@
 
 <body>
 	<section>
-		<h1>A. Bera</h1>
-		<h2>Bilgisayar Mühendisi</h2>
-		<h2> Marka Danışmanı</h2>
 		<a target="_blank" href="https://github.com/ahmedbera">Github</a>
+		<a target="_blank" href="https://www.dropbox.com/s/y8dta0msoiowk64/abn.pdf?dl=0">CV</a>
+		<h1>A. Bera Nişancı</h1>
+		<div id="titles">
+			<h2>Bilgisayar Mühendisliği <span class="education">2018 | Yalova Üniversitesi</span></h2>
+			<h2>Marka İletişimi<span class="education">2016 | Anadolu Üniversitesi</span></h2>
+		</div>
+		<h3>Projeler</h3>
+		<ul>
+			<li>
+				MMD Bot Infografik <span class="tech">Adobe Photoshop</span>
+				<div>
+					<code>Kullanıcıların müzik dinleme alışkanlıkları, dinledikleri anlık şarkı bilgisi kullanılarak infografik tasarlanması. Hazırlanan infografik şablonları Python ortamında gerçeklenmiştir.</code>
+					<a href="/img/mmd.png" target="blank"><img src="/img/mmd.png" alt=""></a>
+				</div>
+			</li>
+			<li>
+				Kapı Bilgi Ekranı <span class="tech">HTML, CSS, Javascript</span>
+				<div>
+					<code>Özel bir üniversite kampüsünde bulunan dijital pano ekranları için özel yazılım geliştirme. Arayüz gösterimi için pano ekranlarında bulunan internet tarayıcı kullanılmıştır. Oda numarası girildiğinde bilgilerin bulunduğu veri tabanı ile iletişime geçerek odada bulunan kişi sayısına göre tasarımını değiştirmektedir. Ayrıca öğretim elemanlarına verilen yönetim paneli sayesinde ekran anlık olarak güncellenebilmektedir. </code>
+					<a href="/img/medi.png" target="blank"><img src="/img/medi.png" alt=""></a>
+				</div>
+			</li>
+			<li>
+				Ghost of Bully <span class="tech">Python, SQLite</span>
+				<div>
+					<code>Kullanıcıların mesajlarını Markov Zinciri kullanarak rastgele cümleler üreten sohbet botu.</code>
+				</div>
+			</li>
+			<li>
+				Mubot/Mudroid <span class="tech">Javascript, React Native, Node.js</span>
+				<div>
+					<code>Çizgi roman veritabanı hizmeti sunan internet sitesinden HTML parse yöntemi ile gerekli verilerin Node.js ortamında çekilmesi. <br/>
+						React Native aracılığı ile bu veritabanında; anahtar kelime ile arama, tür ile detaylı arama, takip ettikleri, etmek istedikleri vb. serileri liste şeklinde tutma, istenen çizgi romanların detaylı bilgisine erişme olanağı sağlayan çapraz platform mobil uygulama
+					</code>
+					<a href="/img/mudroid1.png" target="blank"><img src="/img/mudroid1.png" alt=""></a>
+					<a href="/img/mudroid2.png" target="blank"><img src="/img/mudroid2.png" alt=""></a>
+				</div>
+			</li>
+			<li>
+				Tez Deney <span class="tech">Typescript, Angular 4, Mongo.db, Node.js, Express.js</span>
+				<div>
+					<code>Geliştiricilerin bir kullanıcı deneyimi yöntemi olan Ağaç Testini son kullanıcılar ile test edebildikleri, sonuçların grafiksel ve niceliksel olarak sunulduğu internet servisi.</code>
+				</div>
+			</li>
+			<li>
+				Seenema <span class="tech">Typescript, Ionic Framework</span>
+				<div>
+					<code>Trakt.tv isimli film veri tabanı tarafından sağlanan API kullanılarak Android uygulama geliştirilmesi.</code>
+				</div>
+			</li>
+			<li>
+				Türkçe Font Ayracı <span class="tech">C#</span>
+				<div>
+					<code>Bir dizinde bulunan yazı tiplerinin Türkçe karakter içerip içermediğini kontrol edilmesi.</code>
+				</div>
+			</li>
+		</ul>
 	</section>
+	<script>		
+		let list = Array.from(document.getElementsByTagName("li"));
+		
+		list.forEach(li => {
+			li.addEventListener("click", function() {
+				if(this.classList.contains("active")) {
+					this.classList.remove("active");
+				} else {
+					list.forEach(li => { li.classList.remove("active")})
+					this.classList.add("active")
+				}
+			}, false)
+		})
+	</script>
 </body>
 
 </html>
