@@ -65,6 +65,10 @@ li div img {
     max-height: 250px;
     max-width: 300px;
 }
+li > code {
+    display: block;
+    opacity: .6;
+}
 .tech,
 .education {
     font-family: monospace;
