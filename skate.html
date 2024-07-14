@@ -1,0 +1,123 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Skate Tracker</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #form {
+            display: flex;
+            gap: 1rem;
+        }
+
+        #form input {
+            flex-grow: 1;
+            padding: .5rem;
+            border: 1px solid rgb(118, 118, 118);
+            border-radius: .5rem;
+        }
+
+        .skate-counter {
+            display: flex;
+            gap: .5rem;
+            justify-content: center;
+            margin: .5rem 0;
+        }
+
+        .skater-name {
+            max-width: 340px;
+            font-weight: bold;
+            margin: 1rem auto 0 auto;
+        }
+
+        .skate-counter span {
+            width: 4rem;
+            height: 4rem;
+            display: inline-flex;
+            background: #ededed;
+            border-radius: 1rem;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .skate-counter[data-score='1'] span:nth-child(1) {
+            background-color: firebrick;
+            color: white;
+        }
+        .skate-counter[data-score='2'] span:nth-child(-n+2) {
+            background-color: firebrick;
+            color: white;
+        }
+        .skate-counter[data-score='3'] span:nth-child(-n+3) {
+            background-color: firebrick;
+            color: white;
+        }
+        .skate-counter[data-score='4'] span:nth-child(-n+4) {
+            background-color: firebrick;
+            color: white;
+        }
+        .skate-counter[data-score='5'] span {
+            background-color: firebrick;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p>Enter names of skaters seperated by a comma. Example "skater1, skater2" then press start.</p>
+        <section id="form">
+            <input name="players" id="player-input">
+            <button type="button" onclick="handleStart()">Start</button>
+            <button type="button" onclick="handleReset()">Reset</button>
+        </section>
+        <section id="skater-list">
+        </section>
+    </main>
+    <script>
+        function getSkate(name = "", score = 0) {
+            return `
+            <p class="skater-name">${name}</p>
+            <div class="skate-counter" data-name="${name}" data-score="${score}">
+                <span onclick="handleLetter('${name}', 1)">S</span>
+                <span onclick="handleLetter('${name}', 2)">K</span>
+                <span onclick="handleLetter('${name}', 3)">A</span>
+                <span onclick="handleLetter('${name}', 4)">T</span>
+                <span onclick="handleLetter('${name}', 5)">E</span>
+            </div>`
+        }
+
+        function handleLetter(name, score) {
+            const player = document.querySelector(`[data-name="${name}"]`);
+            player.setAttribute("data-score", score)
+        }
+
+        function handleStart() {
+            const input = document.getElementById("player-input").value.split(",").map(t => t.trim());
+            const section = document.getElementById("skater-list");
+            section.innerHTML = "";
+            input.forEach(player => {
+                section.innerHTML += getSkate(player);
+            });
+        }
+
+        function handleReset() {
+            const section = document.getElementById("skater-list");
+            section.innerHTML = "";
+        }
+
+    </script>
+</body>
+
+</html>
