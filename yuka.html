@@ -1,0 +1,201 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YUKA Color Picker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="flex flex-col md:flex-row justify-center items-center m-auto p-4"
+  >
+    <script>
+      function handleColorChange(e) {
+        const color = e.target.value;
+        const target = e.target.attributes["data-target"].value;
+
+        document.getElementById(target).style = "color: " + color;
+      }
+
+      function startup(e, id) {
+        const ilist = document.querySelectorAll("input");
+        ilist.forEach((input) => {
+          input.addEventListener("change", handleColorChange);
+        });
+      }
+
+      window.onload = () => {
+        startup();
+      };
+    </script>
+
+    <div
+      class="border border-gray-300 p-4 m-4 rounded-xl w-full shadow-md max-w-96"
+    >
+      <div
+        class="flex justify-between items-center mb-2 border rounded-lg px-4 py-2 border-gray-300"
+      >
+        <label for="bgcolor">Arkaplan</label>
+        <input
+          type="color"
+          name="bgcolor"
+          class="input"
+          data-target="svg-bg"
+          value="#9a1d22"
+        />
+      </div>
+      <div
+        class="flex justify-between items-center mb-2 border rounded-lg px-4 py-2 border-gray-300"
+      >
+        <label for="textcolor"> YUKA Rengi </label>
+        <input
+          type="color"
+          name="textcolor"
+          class="input"
+          data-target="YUKA"
+          value="#ffffff"
+        />
+      </div>
+      <div
+        class="flex justify-between items-center mb-2 border rounded-lg px-4 py-2 border-gray-300"
+      >
+        <label for="humancolor"> İnsan Rengi </label>
+        <input
+          type="color"
+          name="humancolor"
+          class="input"
+          data-target="simge"
+          value="#ffffff"
+        />
+      </div>
+      <div
+        class="flex justify-between items-center mb-2 border rounded-lg px-4 py-2 border-gray-300"
+      >
+        <label for="yearcolor"> Yıl Rengi </label>
+        <input
+          type="color"
+          name="yearcolor"
+          class="input"
+          data-target="_2025"
+          value="#ffffff"
+        />
+      </div>
+      <div
+        class="flex justify-between items-center mb-2 border rounded-lg px-4 py-2 border-gray-300"
+      >
+        <label for="bordercolor"> Çerçeve Rengi </label>
+        <input
+          type="color"
+          name="bordercolor"
+          class="input"
+          data-target="cerceve"
+          value="#ffffff"
+        />
+      </div>
+    </div>
+
+    <svg
+      id="Layer_2"
+      data-name="Layer 2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 230.147 340.042"
+      class="max-w-96"
+    >
+      <g id="svg-bg" style="color: #9a1d22">
+        <rect
+          x="-42.695"
+          y="65.203"
+          width="340.042"
+          height="230.147"
+          rx="28.002"
+          transform="translate(295.351 42.695) rotate(90)"
+          style="fill: currentColor"
+          id="_svg-bg"
+        />
+      </g>
+      <g id="cerceve" style="color: #fff">
+        <path
+          id="_cerceve"
+          d="M214.4,16.256H40.255a22.027,22.027,0,0,0-22,22V322.3a22.027,22.027,0,0,0,22,22H214.4a22.027,22.027,0,0,0,22-22V38.258A22.027,22.027,0,0,0,214.4,16.256ZM159.1,338.3H95.558V312.719a6,6,0,0,1,6-6H153.1a6,6,0,0,1,6,6Zm71.305-16a16,16,0,0,1-16,16H162.1V312.719a9.01,9.01,0,0,0-9-9H101.558a9.01,9.01,0,0,0-9,9V338.3h-52.3a16,16,0,0,1-16-16V38.258a16,16,0,0,1,16-16H214.4a16,16,0,0,1,16,16Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+      </g>
+      <g id="simge" style="color: #fff">
+        <path
+          id="İnsan"
+          d="M202.919,182.979l-19.193-19.192v19.477H138.481l32.645-32.646-43.8-43.8-43.8,43.8,32.646,32.646H70.926V163.787L51.734,182.979v17.5h58.6L53.549,257.269l73.777-.009,73.777.009-56.787-56.788h58.6Zm-98.1-33.34,22.508-22.508,22.509,22.508-22.509,22.508Zm61.508,92.684h-78l39-39Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+        <rect
+          id="teker-sag"
+          x="154.402"
+          y="273.749"
+          width="11.975"
+          height="11.975"
+          transform="translate(232.528 -41.736) rotate(45)"
+          style="fill: currentColor"
+        />
+        <rect
+          id="teker-sol"
+          x="90.865"
+          y="273.749"
+          width="11.975"
+          height="11.975"
+          transform="translate(213.918 3.192) rotate(45)"
+          style="fill: currentColor"
+        />
+        <polygon
+          id="tahta"
+          points="48.769 252.54 56.242 260.013 76.074 260.013 173.905 260.013 181.378 252.54 48.769 252.54"
+          style="fill: currentColor"
+        />
+      </g>
+
+      <g id="YUKA" style="color: #fff">
+        <path
+          d="M35.348,45.761h12.78l.24.48L59.588,64.9l11.28-18.66.3-.48h12.78l-.84,1.32-17.7,27.66v13.32H53.768V74.741l-17.64-27.66Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+        <path
+          d="M85.267,45.761h11.4V66.7q0,5.162,2.31,8.1a7.867,7.867,0,0,0,6.57,2.94,8.041,8.041,0,0,0,6.631-2.94q2.369-2.94,2.369-8.1V45.761h11.4V67q0,10.26-5.64,16.05t-14.76,5.79q-9.12,0-14.7-5.79T85.267,67V45.761Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+        <path
+          d="M130.447,45.761h11.4v16.8l16.56-16.5.24-.3h13.68l-1.44,1.44-17.1,16.56,17.46,22.92,1.019,1.38h-13.08l-.3-.36-12.96-17.22-4.08,4.14v13.44h-11.4v-42.3Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+        <path
+          d="M189.666,45.761h12.72l.24.6,16.679,40.5.481,1.2h-12.3l-.24-.6-2.76-7.02h-16.92l-2.761,7.02-.239.6h-12.3l.48-1.2,16.68-40.5Zm10.86,25.56-4.5-11.7-4.56,11.7Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+      </g>
+      <g id="_2025" data-name="2025" style="color: #fff">
+        <path
+          d="M107.355,315.211a6.567,6.567,0,0,1,3.938,1.156,3.9,3.9,0,0,1,1.606,3.381,4.1,4.1,0,0,1-.829,2.519,6.388,6.388,0,0,1-2.006,1.775q-1.176.662-2.351,1.207a12.33,12.33,0,0,0-2.006,1.145,1.634,1.634,0,0,0-.829,1.271h8.231v2.9H101.517v-2.2a4.8,4.8,0,0,1,.6-2.363,5.655,5.655,0,0,1,1.481-1.764,18.458,18.458,0,0,1,1.931-1.3q1.05-.619,1.933-1.04a6.842,6.842,0,0,0,1.48-.924,1.38,1.38,0,0,0,.6-1.008,1.642,1.642,0,0,0-.526-1.375,2.7,2.7,0,0,0-1.659-.41,3.988,3.988,0,0,0-1.763.431,5.318,5.318,0,0,0-1.324.851l-.44.419-1.785-2.393c.055-.057.137-.137.241-.242a7.359,7.359,0,0,1,.683-.546,8.538,8.538,0,0,1,1.1-.693,7.253,7.253,0,0,1,1.47-.546A6.921,6.921,0,0,1,107.355,315.211Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+        <path
+          d="M120.858,315.211a5.829,5.829,0,0,1,4.62,2.163,9.158,9.158,0,0,1,0,11.036,6.067,6.067,0,0,1-9.271,0,9.119,9.119,0,0,1,0-11.036A5.884,5.884,0,0,1,120.858,315.211Zm0,3.045a2.793,2.793,0,0,0-2.341,1.3,6.4,6.4,0,0,0,0,6.657,2.791,2.791,0,0,0,2.341,1.3,2.747,2.747,0,0,0,2.322-1.291,6.51,6.51,0,0,0-.011-6.668A2.751,2.751,0,0,0,120.858,318.256Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+        <path
+          d="M134.424,315.211a6.564,6.564,0,0,1,3.937,1.156,3.9,3.9,0,0,1,1.607,3.381,4.105,4.105,0,0,1-.83,2.519,6.373,6.373,0,0,1-2,1.775q-1.177.662-2.352,1.207a12.33,12.33,0,0,0-2.006,1.145,1.634,1.634,0,0,0-.829,1.271h8.232v2.9H128.586v-2.2a4.8,4.8,0,0,1,.6-2.363,5.669,5.669,0,0,1,1.481-1.764,18.475,18.475,0,0,1,1.932-1.3q1.05-.619,1.932-1.04a6.875,6.875,0,0,0,1.481-.924,1.381,1.381,0,0,0,.6-1.008,1.644,1.644,0,0,0-.525-1.375,2.7,2.7,0,0,0-1.659-.41,3.992,3.992,0,0,0-1.764.431,5.309,5.309,0,0,0-1.323.851l-.441.419-1.785-2.393.241-.242a7.505,7.505,0,0,1,.683-.546,8.618,8.618,0,0,1,1.1-.693,7.241,7.241,0,0,1,1.469-.546A6.923,6.923,0,0,1,134.424,315.211Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+        <path
+          d="M143.306,315.485h8.821v3.023h-6.174l-.294,2.667a5.555,5.555,0,0,1,2.52-.566,4.792,4.792,0,0,1,5.145,5.1,4.289,4.289,0,0,1-1.648,3.539,6.554,6.554,0,0,1-4.211,1.313,8.857,8.857,0,0,1-2.047-.231,6.926,6.926,0,0,1-1.617-.568,10.329,10.329,0,0,1-1.124-.672,5.332,5.332,0,0,1-.714-.566l-.21-.232,1.533-2.477.179.178a6.062,6.062,0,0,0,.514.42,5.051,5.051,0,0,0,.85.525,6.5,6.5,0,0,0,1.166.409,5.721,5.721,0,0,0,1.47.19q2.478,0,2.478-1.828a2.388,2.388,0,0,0-.609-1.606,2.34,2.34,0,0,0-1.869-.7,4.462,4.462,0,0,0-1.4.21,3.19,3.19,0,0,0-.913.42l-.252.23-2.52-1.112Z"
+          transform="translate(-12.253 -10.256)"
+          style="fill: currentColor"
+        />
+      </g>
+    </svg>
+  </body>
+</html>
